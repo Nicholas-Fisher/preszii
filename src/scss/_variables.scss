@@ -1,0 +1,24 @@
+$mobile: '(max-width: 768px)';
+$not-mobile: '(min-width: 769px)';
+$nav-height: 60px;
+$mobile-text-size: 16px;
+$desktop-text-size: 18px;
+$dimmer-color: rgba(0, 0, 0, 0.5);
+$nav-z: 151;
+$nav-number-of-buttons: 4;
+$nav-button-height: 50px;
+$max-width: 1500px;
+$theme-color1: #B58D3D;
+
+@mixin flex-center() {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+@mixin block-margins() {
+  padding: 70px 20px;
+  @media #{$mobile} {
+    padding: 40px 20px;
+  }
+}
