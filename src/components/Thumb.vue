@@ -1,13 +1,16 @@
 <template>
   <div class="gallery-thumb">
-    <button :style="'background-image: url(' + img + ')'" @click="onThumbnailClick(img)"></button>
+    <button :style="'background-image: url(' + img + ')'" @click="onThumbnailClick(img)">
+      <span class="hover-text" v-text="text" v-if="text"/>
+    </button>
   </div>
 </template>
 
 <script>
 export default {
   props: {
-    img: String
+    img: String,
+    text: String,
   },
   methods: {
     onThumbnailClick(img) {
@@ -44,6 +47,18 @@ export default {
 }
 .gallery-thumb > button:hover, .gallery-thumb > button:focus {
   cursor: pointer;
+}
+.gallery-thumb:hover {
+  .hover-text {
+    display: initial;
+  }
+}
+.hover-text {
+  display: none;
+  color: #fff;
+  background-color: rgba(0, 0, 0, 0.5);
+  padding: 10px;
+  border-radius: 5px;
 }
 @media (max-width: 768px) {
   .gallery-thumb {

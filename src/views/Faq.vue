@@ -1,25 +1,30 @@
 <template>
   <div class="faq">
     <div class="splash-text">FAQ</div>
-    <br>
-    <div class="question">How long does a haircut take?</div>
-    <div class="answer">About an hour.</div>
-    <br>
-    <div class="question">Another question?</div>
-    <div class="answer">Another answer.</div>
+    <div class="qa-container">
+      <div v-for="(qa, index) in lunchData.faq" :key="index">
+        <br>
+        <div class="question">{{qa.question}}</div>
+        <div class="answer">{{qa.answer}}</div>
+      </div>
+    </div>
   </div>
 </template>
 
 <script>
-
 export default {
+  computed: {
+    lunchData() {
+      return this.$store.state.lunchData;
+    }
+  },
 }
 </script>
 
 <style lang="scss">
 .faq {
   display: flex;
-  // justify-content: center;
+  align-items: center;
   flex-direction: column;
 }
 .faq > .splash-text {
