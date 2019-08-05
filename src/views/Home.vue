@@ -312,7 +312,7 @@ export default {
     width: 100vw;
     max-width: 1200px;
     .carousel-img {
-      height: 800px;
+      height: 600px;
       @media #{$mobile} {
         height: 300px;
       }
