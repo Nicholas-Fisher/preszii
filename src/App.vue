@@ -87,7 +87,7 @@ ul {
 }
 .close-text {
   text-align: center;
-  font-weight: gold;
+  color: gold;
 }
 .footer {
   height: $nav-height;
