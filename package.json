@@ -18,7 +18,7 @@
     "siema": "^1.5.1",
     "vue": "^2.6.10",
     "vue-router": "^3.0.3",
-    "vuetify": "^2.0.2",
+    "vuetify": "^2.6.10",
     "vuex": "^3.1.1"
   },
   "devDependencies": {
